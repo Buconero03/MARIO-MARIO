@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super Babylon Bros</title>
-    <!-- Tailwind via CDN, ok per ora -->
+
+    <!-- Tailwind via CDN va bene per adesso -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-      body, html {
+      html,
+      body {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -15,16 +18,16 @@
         overflow: hidden;
         background-color: #000;
       }
-      #root {
-        width: 100%;
-        height: 100%;
+      canvas {
+        touch-action: none;
+        outline: none;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
 
-    <!-- QUESTO è il pezzo che manca: carica React/Vite -->
+    <!-- QUESTO è il pezzo che mancava -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
