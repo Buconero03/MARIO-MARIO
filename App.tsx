@@ -42,7 +42,8 @@ export default function App() {
   };
 
   return (
-    <div className="relative w-full h-full font-sans select-none text-white">
+      <div className="relative w-screen h-screen font-sans select-none text-white overflow-hidden">
+
       {/* Game Viewport */}
       <div className="absolute inset-0 z-0 bg-sky-400">
         <GameCanvas 
