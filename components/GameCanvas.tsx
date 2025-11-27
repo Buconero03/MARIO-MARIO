@@ -7,6 +7,7 @@ interface GameCanvasProps {
   gameState: GameState;
   onGameStateChange: (state: GameState) => void;
   onScoreUpdate: (score: number) => void;
+  onLivesUpdate: (lives: number) => void;
   onTimeUpdate: (time: number) => void;
   onLevelUpdate?: (level: number) => void;
   onRestart: (callback: () => void) => void;
@@ -16,6 +17,7 @@ export const GameCanvas: React.FC<GameCanvasProps> = ({
   gameState,
   onGameStateChange,
   onScoreUpdate,
+  onLivesUpdate,
   onTimeUpdate,
   onLevelUpdate,
   onRestart,
@@ -36,8 +38,11 @@ export const GameCanvas: React.FC<GameCanvasProps> = ({
     const gameScene = new GameScene(engine, canvasRef.current, {
       onGameStateChange,
       onScoreUpdate,
+      onLivesUpdate, 
       onTimeUpdate,
+      onLivesUpdate,
       onLevelUpdate,
+      
     });
     sceneRef.current = gameScene;
 
