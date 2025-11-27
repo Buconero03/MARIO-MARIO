@@ -79,10 +79,14 @@ export const GameCanvas: React.FC<GameCanvasProps> = ({
     }
   }, [gameState]);
 
-  return (
-    <canvas 
-      ref={canvasRef} 
-      className="w-full h-full block outline-none"
-    />
-  );
-};
+return (
+  <canvas
+    ref={canvasRef}
+    className="block bg-sky-400"
+    style={{
+      width: '100vw',
+      height: '100vh',
+      display: 'block',
+    }}
+  />
+);
